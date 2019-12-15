@@ -55,8 +55,8 @@ class UMengAnalytics {
   /// 登陆统计
   /// [id]
   /// [interval]
-  static Future<Null> loginPageView(String id, {double interval}) async {
-    _channel.invokeMethod("loginPageView", {"id": id, interval: interval});
+  static Future<Null> loginPageView(String id, {String channel}) async {
+    _channel.invokeMethod("loginPageView", {"id": id, "channel": channel});
   }
 
   /// 计数事件统计
