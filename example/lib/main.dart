@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
     if (_inited == null) {
       _inited = true;
       UMengAnalytics.init('5a20cc45f43e48512000015d',
-          policy: Policy.BATCH, encrypt: true, reportCrash: false);
+           encrypt: true, reportCrash: false);
     }
   }
 
