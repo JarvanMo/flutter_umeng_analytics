@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
             children: [
             new RaisedButton(
               onPressed: () {
-                UMengAnalytics.logEvent("hello");
+//                UMengAnalytics.logEvent("hello");
               },
               child: new Text('Running on: hello'),
             ),

@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_umeng_analytics (0.0.1):
+    - Flutter
+    - UMengAnalytics-NO-IDFA
+  - UMengAnalytics-NO-IDFA (4.2.5)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_umeng_analytics (from `.symlinks/plugins/flutter_umeng_analytics/ios`)
+
+SPEC REPOS:
+  trunk:
+    - UMengAnalytics-NO-IDFA
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_umeng_analytics:
+    :path: ".symlinks/plugins/flutter_umeng_analytics/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_umeng_analytics: 75b4569c5f0740bf86665e1b5ac3c8a79cf9c933
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+
+PODFILE CHECKSUM: 3dbe063e9c90a5d7c9e4e76e70a821b9e2c1d271
+
+COCOAPODS: 1.8.4

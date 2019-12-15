@@ -31,8 +31,18 @@
     else
       [MobClick event:call.arguments[@"name"]];
     result(nil);
-  } else {
-    result(FlutterMethodNotImplemented);
+  } else if([@"loginPageView" isEqualToString:call.method]) {
+      NSString *id = call.arguments[@"id"];
+      NSString *channel = call.arguments[@"channel"];
+      if(channel == nil || [channel isKindOfClass:[NSNull class]]){
+          [MobClick profileSignInWithPUID:id];
+      }else {
+          [MobClick profileSignInWithPUID:id provider:channel];
+      }
+      result(nil);
+    
+  }else{
+       result(FlutterMethodNotImplemented);
   }
 }
 

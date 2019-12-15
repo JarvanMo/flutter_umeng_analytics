@@ -89,22 +89,31 @@ public class FlutterUmengAnalyticsPlugin implements MethodCallHandler {
     // 打开页面时进行统计
     public void beginPageView(MethodCall call, Result result) {
         MobclickAgent.onPageStart((String) call.argument("name"));
-        MobclickAgent.onResume(activity);
+//        MobclickAgent.onResume(activity);
         result.success(null);
     }
 
     // 关闭页面时结束统计
     public void endPageView(MethodCall call, Result result) {
         MobclickAgent.onPageEnd((String) call.argument("id"));
-        MobclickAgent.onPause(activity);
+//        MobclickAgent.onPause(activity);
         result.success(null);
     }
 
     // 登陆统计
     public void loginPageView(MethodCall call, Result result) {
-        MobclickAgent.onProfileSignIn((String) call.argument("id"));
+        String channel = call.argument("channel");
+        String id = call.argument("id");
+        if (channel != null) {
+            MobclickAgent.onProfileSignIn(channel, id);
+        } else {
+            MobclickAgent.onProfileSignIn(id);
+
+        }
         // Session间隔时长,单位是毫秒，默认Session间隔时间是30秒,一般情况下不用修改此值
-        MobclickAgent.setSessionContinueMillis((Long) call.argument("interval"));
+//        MobclickAgent.setSessionContinueMillis((Long) call.argument("interval"));
+        result.success(null);
+
     }
 
     /**
