@@ -49,7 +49,7 @@ class UMengAnalytics {
   /// 关闭页面时结束统计
   /// [name]
   static Future<Null> endPageView(String name) async {
-    _channel.invokeMethod("endPageView", {"id": name});
+    _channel.invokeMethod("endPageView", {"name": name});
   }
 
   /// 登陆统计
